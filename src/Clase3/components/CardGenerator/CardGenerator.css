@@ -1,0 +1,14 @@
+.container {
+    display: flex;
+    width: 100;
+}
+
+.col {
+    flex: 1;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
