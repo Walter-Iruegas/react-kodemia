@@ -1,7 +1,9 @@
 
 // Importar Dependencias
 import { useState } from 'react'
-import ImageUploader from 'react-images-upload';
+// import ImageUploader from 'react-images-upload';
+import ImageUploading from 'react-images-uploading';
+
 
 import './RegistroUsuarios.css'
 
@@ -9,6 +11,9 @@ import './RegistroUsuarios.css'
 // terminar la lista  de usuarios, que muestre todos los datos que se guardaron
 // cuando se registre un usuario nuevo, hay que limpiar los valores del form o resetarlo
 // el boton de submit no se habilita si el formulario no esta completo
+// modularizar el componente de lista de usarios
+// ListaUsuarios -> props: lista Usuarios
+    // Usuario -> props: datos del usuario
 
 
 export const RegistroUsuarios = () => {
@@ -43,13 +48,12 @@ export const RegistroUsuarios = () => {
     }
 
     // Funcion para guardar las imagenes en el state
-    const onImageSelected = (pictureFiles, pictureDataURLs) => {
-        console.log("🚀 ~ file: RegistroUsuarios.js:42 ~ onImageSelected ~ pictureDataURLs:", pictureDataURLs);
-        console.log("🚀 ~ file: RegistroUsuarios.js:42 ~ onImageSelected ~ pictureFiles:", pictureFiles);
+    const onImageSelected = (pictureFiles) => {
+        console.log("🚀 ~ file: RegistroUsuarios.js:42 ~ onImageSelected ~ pictureFiles:", pictureFiles[0]);
 
         setFormValues({
             ...formValues,
-            pictureURL: pictureDataURLs[0]
+            pictureURL: pictureFiles[0].dataURL
         })
     }
 
@@ -73,6 +77,7 @@ export const RegistroUsuarios = () => {
         setUsuariosRegistrados(newUserList)
         
     }
+
     return (
         <div className="container-fluid registro-container">
             <div className="row">
@@ -84,14 +89,30 @@ export const RegistroUsuarios = () => {
                         <form action="" onSubmit={onFormSubmit}>
 
                             <div className="form-group imageContainer">
-                                <ImageUploader
+                                {/* <ImageUploading
                                     withIcon={true}
                                     buttonText="Choose images"
                                     onChange={onImageSelected}
                                     imgExtension={[".jpg", ".jpeg", ".png", ""]}
                                     maxFileSize={5242880}
                                     singleImage={true}
-                                />
+                                /> */}
+
+                        <ImageUploading
+                            onChange={onImageSelected}
+                            maxNumber={1}
+                        >
+                            {({
+                                onImageUpload,
+                            }) => (
+                            // write your building UI
+                            <div className="upload__image-wrapper">
+                                <div onClick={onImageUpload}>
+                                    Click or Drop here
+                                </div>
+                            </div>
+                            )}
+                            </ImageUploading>
 
                                 {formValues.pictureURL !== "" &&  <img src={formValues.pictureURL} alt="avatar" className="avatar" />}
                             </div>
