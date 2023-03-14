@@ -30,7 +30,7 @@ const DummyList = () => {
     )
 }
 
-const Clase4 = () => {
+export const Clase4 = () => {
    return (
     <div>
     {/* <DummyList/>*/}
@@ -40,4 +40,3 @@ const Clase4 = () => {
    )
 }
 
-export default Clase4;
