@@ -7,6 +7,8 @@ import { Clase6 } from './Clase6/Clase6';
 import { Book } from './Clase6/Books/Book'
 
 import './App.css';
+import { Clase7 } from './Clase7/Clase7';
+import { ProductDetails } from './Clase7/ProductDetails/ProductDetails';
 
 
 const DummyBooksList = () => {
@@ -52,7 +54,7 @@ function App() {
 
   return (
     <div className="App">
-
+      {/* NavBar */}
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <Link className="navbar-brand" to="/">Clase 6</Link>
         <button className="navbar-toggler" type="button" data-toggle="collapse">
@@ -82,12 +84,14 @@ function App() {
             <NavLink className="nav-item nav-link" to="/clase4">Clase 4</NavLink>
             <NavLink className="nav-item nav-link" to="/clase5">Clase 5</NavLink>
             <NavLink className="nav-item nav-link" to="/books">Books</NavLink>
+            <NavLink className="nav-item nav-link" to="/clase7"> Clase 7 </NavLink>
           </div>
         </div>
       </nav>
 
       <div className="container-fluid">
-
+          
+          {/* App Routes */}
         <Routes>
           <Route path='/' element={<h2> All Clases</h2>} />
           <Route path='/clase2' element={<Clase2 />} />
@@ -103,10 +107,11 @@ function App() {
             <Route path=":bookID/:bookTitle?/:genre?" element={<Book />} />
             <Route path="new" element={<h2> Add aasdasdasddfljhdfahdfkjashdfkjhasdfkjhsdfiuy  </h2>} />
             <Route path="delete" element={<h2> delete  Book  </h2>} />
-
-
-
           </Route>
+
+          <Route path='/clase7' element = {<Clase7/>}/>
+          <Route path='/product/:productID' element = {<ProductDetails/>}/>
+
 
           <Route path='*' element={<h2> Selecciona una Clase </h2>} />
         </Routes>
@@ -118,5 +123,7 @@ function App() {
     </div>
   );
 }
+
+
 
 export default App;

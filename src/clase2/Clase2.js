@@ -7,7 +7,7 @@ const Clase2 = () => {
     }
 
     return (
-        <div className="container" style={{
+        <div className="cardsContainer" style={{
             display: 'flex',
             flexDirection: 'row',
             width: '100%',
