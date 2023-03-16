@@ -3,6 +3,10 @@
     padding: 4em;
 }
 
+form {
+    width: 100%;
+}
+
 .form-container {
     max-width: 600px;
     border: 1px solid #e3e3e3;
@@ -21,8 +25,8 @@
 }
 
 .imageContainer {
-    display: flex;
-    align-items: center;
+    align-items: flex-start;
+    flex-direction: column;
 }
 
 .fileUploader {
@@ -33,7 +37,17 @@
 .avatar {
     width: 75px;
     height: 75px;
+    margin-top: 1em;
     border-radius: 50%;
     object-fit: cover;
     border: 1px solid #333335;
+}
+
+.upload__image-wrapper {
+    border: 4px dashed #e3e3e3;
+    width: 100%;
+    min-height: 85px;
+    display: FLEX;
+    align-items: center;
+    justify-content: center;
 }

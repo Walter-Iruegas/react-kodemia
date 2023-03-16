@@ -12,7 +12,7 @@ import './RegistroUsuarios.css'
     // Componente Form
     // Componente Lista
         // Componente List Item
-// 2. Hacer estrategia para comunucar datos entre los componentes o compartir state
+// 2. Hacer estrategia para comunucar
 
 
 export const RegistroUsuarios = () => {
