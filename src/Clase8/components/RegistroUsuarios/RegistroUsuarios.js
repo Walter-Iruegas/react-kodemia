@@ -7,12 +7,13 @@ import ImageUploading from 'react-images-uploading';
 
 import './RegistroUsuarios.css'
 
-// Objetivo Practica
-// 1. Modularizar el Componente RegistroUsuarios en partes
-    // Componente Form
-    // Componente Lista
-        // Componente List Item
-// 2. Hacer estrategia para comunucar datos entre los componentes o compartir state
+// Tarea Clase 5
+// terminar la lista  de usuarios, que muestre todos los datos que se guardaron
+// cuando se registre un usuario nuevo, hay que limpiar los valores del form o resetarlo
+// el boton de submit no se habilita si el formulario no esta completo
+// modularizar el componente de lista de usarios
+// ListaUsuarios -> props: lista Usuarios
+// Usuario -> props: datos del usuario
 
 
 export const RegistroUsuarios = () => {
