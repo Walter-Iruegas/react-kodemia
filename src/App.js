@@ -10,6 +10,7 @@ import './App.css';
 import { Clase7 } from './Clase7/Clase7';
 import { ProductDetails } from './Clase7/ProductDetails/ProductDetails';
 import { Clase8 } from './Clase8/Clase8';
+import {Clase9} from './Clase9/Clase9';
 
 
 const DummyBooksList = () => {
@@ -87,6 +88,7 @@ function App() {
             <NavLink className="nav-item nav-link" to="/books">Books</NavLink>
             <NavLink className="nav-item nav-link" to="/clase7"> Clase 7 </NavLink>
             <NavLink className="nav-item nav-link" to="/clase8"> Clase 8 </NavLink>
+            <NavLink className="nav-item nav-link" to="/clase9"> Clase 9 </NavLink>
           </div>
         </div>
       </nav>
@@ -115,7 +117,7 @@ function App() {
           <Route path='/product/:productID' element = {<ProductDetails/>}/>
 
           <Route path='/clase8' element = {<Clase8/>}/>
-
+          <Route path='/clase9' element = {<Clase9/>}/>
           <Route path='*' element={<h2> Selecciona una Clase </h2>} />
         </Routes>
 
