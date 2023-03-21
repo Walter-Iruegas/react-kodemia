@@ -1,0 +1,7 @@
+.todo {
+    display: flex;
+    width: 100%;
+    padding: 2rem;
+    border: 1px solid #e3e3e3;
+    border-radius: 20px;
+}

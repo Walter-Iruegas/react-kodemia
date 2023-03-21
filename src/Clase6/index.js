@@ -1,0 +1,1 @@
+export {Clase6} from './Clase6'
