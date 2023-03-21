@@ -1,0 +1,1 @@
+export {UserFormRegister} from './UserFormRegister'
