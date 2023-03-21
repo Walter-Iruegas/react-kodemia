@@ -1,0 +1,29 @@
+.userContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-bottom: 1px solid #e3e3e3;
+    padding: 2em;
+}
+
+.userContainer .avatarMini {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    flex: 1;
+
+}
+
+.userContainer .avatarMini img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 2em;
+}
+
+.userDetails {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 0 0 0 4em;
+}
